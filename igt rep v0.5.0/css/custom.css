@@ -1,0 +1,186 @@
+body {
+	font-family: Consolas, monospace, helvetica;
+}
+
+div h1{
+	color:white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+	letter-spacing: 3px;
+}
+
+div h3{
+	color:white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+	letter-spacing: 3px;
+}
+
+div h4{
+	color:white;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+	letter-spacing: 3px;
+	font-size: 14px;
+}
+
+p{
+	color:white;
+}
+
+ul li{
+	text-align: left;
+	color:white;
+	line-height: 2;
+}
+
+.data{
+	margin: 0 0 5px 0;
+}
+
+.clicker{
+	cursor: pointer;
+}
+
+.bg-bg{
+	background-color: rgb(140,140,140);
+}
+
+.bg-header{
+	background-color: rgb(100,100,100);
+}
+
+.bg-content{
+	background-color: rgb(100,100,100);
+}
+
+.bg-custom{
+	background-color: rgb(115,115,115);
+}
+
+.btn-primary{
+	background-color: rgb(120,120,120);
+	border-color: rgb(50,50,50);
+}
+.btn-primary[disabled]{
+	background-color: rgb(80,80,80);
+	border-color: rgb(50,50,50);
+}
+.btn-primary:active, .btn-primary:hover, .btn-primary[disabled]:hover{
+	background-color: rgb(80,80,80);
+	border-color: rgb(50,50,50);
+}
+
+.btn-info{
+	background-color: rgb(100,100,100);
+	border-color: rgb(50,50,50);
+	width: 90%;
+}
+.btn-info[disabled]{
+	background-color: rgb(60,60,60);
+	border-color: rgb(50,50,50);
+}
+.btn-info:hover, .btn-info[disabled]:hover{
+	background-color: rgb(60,60,60);
+	border-color: rgb(50,50,50);
+}
+
+.label{
+	font-size:13px;
+	font-weight: 300;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+	padding: 0;
+}
+
+.text-muted{
+	color: rgba(240,240,240,0.4);
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.txt-left {
+	text-align: center;
+}
+.txt-right {
+	text-align: center;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.txt-left {
+		text-align: left;
+	}
+	.txt-right {
+		text-align: right;
+	}
+	.label{
+		font-size:14px;
+		font-weight: 300;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+		padding: 0;
+	}
+/* 	.row{
+		padding:0;
+		margin: 0 0 15px 0;
+	} */
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.txt-left {
+		text-align: left;
+	}
+	.txt-right {
+		text-align: right;
+	}
+	.label{
+		font-size:16px;
+		font-weight: 300;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+		padding: 0;
+	}
+/* 	.row{
+		padding:0;
+		margin: 0 0 15px 0;
+	} */
+	
+}
+
+.outline-default {
+    outline: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.outline-shadow {
+    /* outline: 1px solid rgba(20, 20, 20, 0.2); */
+		box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.6);
+}
+
+.img-shadow {
+	filter: drop-shadow(5px 5px 2px rgba(100,100,100,0.6));
+	max-height: 350px;
+	max-width: 350px;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgb(140,140,140);
+}
+.nav-tabs > li > a {
+  border-radius: 8px 8px 0 0;
+	color:white;
+	border: 3px solid rgb(100,100,100);
+	border-bottom-color:transparent;
+}
+.nav-tabs > li > a:hover {
+	border: 3px solid rgb(100,100,100);
+	border-bottom-color:transparent;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: rgb(120,120,120);
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: white;
+  cursor: default;
+  background-color: rgb(140,140,140);
+  border: 3px solid rgb(100,100,100);
+  border-bottom-color: transparent;
+}

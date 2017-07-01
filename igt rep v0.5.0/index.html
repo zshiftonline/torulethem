@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.min.css">
+	<title>To Rule Them All</title>
+	<link rel="icon" type="image/png" href="images/icon6.png">
+</head>
+
+<body class="bg-bg">
+<div class="container-fluid">
+	<div class="row bg-header outline-shadow">
+		<header class="row">
+			<div class="col-md-12 col-lg-12">
+				<h1 class="text-center"><img class="hidden-xs img-shadow" src="images/icon6.png" alt="" height="5%" width="5%">To Rule Them All<img class="hidden-xs img-shadow" src="images/icon6.png" alt="" height="5%" width="5%"></h1>
+			</div>
+		</header>
+		<div class="row">
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label">Money:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="money">0.00</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label">$/sec:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="payPerTick">0.0</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label" id="">Occupation:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="">null</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label">Influence:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="influence">0.0</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label">Infl./sec:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="infPerTick">0.0</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-right">
+					<span class="label" id="">Rank:</span>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-2 txt-left">
+					<span class="label" id="">null</span>
+				</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-md-6 col-lg-4">
+			<img src="images/click.png" alt="" class="img-responsive img-circle center-block img-shadow clicker" height="100%" width="100%" onclick="getMoney();">
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-8 bg-content text-center outline-shadow">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab1">Occupation</a></li>
+				<li><a href="#tab2">Extra Income</a></li>
+				<li><a href="#tab3">Stats</a></li>
+				<li class="dropdown">
+       	 	<a class="dropdown-toggle" data-toggle="dropdown" href="">Options
+					<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+							<li><a href="#tab4">Options</a></li>
+							<li><a href="#tab5">Changelog</a></li>
+							<li><a href="#tab6">Feedback</a></li>
+							<li><a href="#tab7">Credits</a></li>
+							<li><a href="#tab8">Donate</a></li>
+						</ul>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="tab1" class="tab-pane fade in active">
+					<h3>Occupation</h3>
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-8 txt-right" id="minWageJob2">
+							<input type="button" disabled="disabled" id="minWageJob" class="btn btn-primary btn-group-lg btn-block" value="Minimum Wage job" onclick="job('minWageJob');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Price of uniform: <span id="minWageJob.cost">25</span></div>
+						</div>
+					</div>
+					<div class="row">
+						<div id="shiftLeader2" class="promotion col-sm-12 col-md-6 col-lg-8 txt-right">
+							<input type="button" disabled="disabled" id="shiftLeader" class="btn btn-info" value="Shift Leader" onclick="upgrade('shiftLeader');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Required Influence: <span id="shiftLeader.Cost">100</span></div>
+						</div>
+					</div>
+					<div class="row">
+						<div id="assistantMan2" class="promotion col-sm-12 col-md-6 col-lg-8 txt-right">
+							<input type="button" disabled="disabled" id="assistantMan" class="btn btn-info" value="Assistant Manager" onclick="upgrade('assistantMan');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Required Influence: <span id="assistantMan.Cost">300</span></div>
+						</div>
+					</div>
+					<div class="row">
+						<div id="generalMan2" class="promotion col-sm-12 col-md-6 col-lg-8 txt-right">
+							<input type="button" disabled="disabled" id="generalMan" class="btn btn-info" value="General Manager" onclick="upgrade('generalMan');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Required Influence: <span id="generalMan.Cost">600</span></div>
+						</div>
+					</div>
+				</div>
+				<div id="tab2" class="tab-pane fade">
+					<h3>Extra Income</h3>
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-8 txt-right" id="bitcoinMiner2">
+							<input type="button" disabled="disabled" id="bitcoinMiner" class="btn btn-primary btn-group-lg btn-block" value="Bitcoin Miner" onclick="build('bitcoinMiner');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Cost: <span id="bitcoinMiner.cost">2,500</span></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-8 txt-right" id="stockTradeBots2">
+							<input type="button" disabled="disabled" id="stockTradeBots" class="btn btn-primary btn-group-lg btn-block" value="Stock Trading Bots" onclick="build('stockTradeBots');">
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 txt-left">
+							<div class="label">Cost: <span id="stockTradeBots.cost">6,000</span></div>
+						</div>
+					</div>
+					<h3>Side Jobs</h3>
+					<h4>COMING SOON!</h4>
+				</div>
+				<div id="tab3" class="tab-pane fade">
+					<h3>Stats</h3>
+						<h4>COMING SOON!</h4>
+				</div>
+				<div id="tab4" class="tab-pane fade">
+					<h3>Options</h3>
+						<button type="button" class="btn btn-primary btn-group-lg btn-block" data-toggle="modal" data-target="#help"><span class="glyphicon glyphicon-question-sign"></span> Help/Instructions <span class="glyphicon glyphicon-question-sign"></span></button>
+						<h1>Save/Load</h1>
+						<button type="button" class="btn btn-primary btn-group-lg btn-block" onclick="save();"><span class='glyphicon glyphicon-floppy-disk'></span> Save <span class='glyphicon glyphicon-floppy-disk'></span></button>
+						<button type="button" class="btn btn-primary btn-group-lg btn-block" onclick="expo();">Export</button>
+						<span class="label">Use the Export button to export your save data into the field below.</span>
+						<input type="text" class="form-control col-xs-8" id="save" value="">
+						<span class="label">Use the Load button to load your save from the field above.</span>
+						<button type="button" class="btn btn-primary btn-group-lg btn-block" onclick="load();">Load</button>
+						<button type="button" class="btn btn-primary btn-group-lg btn-block" onclick="reset();">Reset</button>
+						<br>
+						<div class="text-muted">v0.5.0 beta</div>
+				</div>
+				<div id="tab5" class="tab-pane fade">
+					<h3>Changelog</h3>
+					<ul>
+						<li>v0.0.1 - created basic template from idea</li>
+						<li>v0.0.5 - basic functioning of website and script</li>
+						<li>v0.2.0 - website layout upgraded and improved javascript. added functionality(new buildings, saving and loading on page load, and reset. tooltips to display for info about buildings)</li>
+						<li>v0.5.0 - fully upgraded website layout using bootstrap and website size decreased because of bootstrap replacing plugins</li>
+					</ul>
+				</div>
+				<div id="tab6" class="tab-pane fade">
+					<h3>Feedback</h3><hr>
+						<form class="bg-custom">
+							<div class="form-group label">
+								<label for="email">Email address:</label>
+								<input required="required" type="email" class="form-control" name="email" id="email">
+							</div>
+							<div class="form-group label">
+								<label for="comment">Comments:</label>
+								<textarea name="comment" id="comment" class="form-control" rows="5" required="required"></textarea>
+							</div>
+							<label for="optradio" class="label">Rate your experience!</label>
+								<label class="radio-inline"><input type="radio" name="optradio">1</label>
+								<label class="radio-inline"><input type="radio" name="optradio">2</label>
+								<label class="radio-inline"><input type="radio" name="optradio">3</label> 
+								<label class="radio-inline"><input type="radio" name="optradio">4</label>
+								<label class="radio-inline"><input type="radio" name="optradio">5</label>
+								<label class="radio-inline"><input type="radio" name="optradio">6</label>
+								<label class="radio-inline"><input type="radio" name="optradio">7</label>
+								<label class="radio-inline"><input type="radio" name="optradio">8</label>
+								<label class="radio-inline"><input type="radio" name="optradio">9</label> 
+								<label class="radio-inline"><input type="radio" name="optradio">10</label>
+							<button type="submit" class="btn btn-primary btn-group-lg btn-block">Submit</button>
+						</form> 
+				</div>
+				<div id="tab7" class="tab-pane fade">
+					<h3>Credits</h3>
+					<p>		Created by Erocktion, but for the people. Credits to Nick_A_Llama, ethan, DucksGoMooful, adriax and Rose for help and suggestions. Some snippets used from StackOverflow.com, but changed accordingly.
+		<br><a href="http://www.freepik.com/free-photos-vectors/business">Money Business vector created by Bakar015 - Freepik.com</a></p>
+				</div>
+				<div id="tab8" class="tab-pane fade">
+					<h3>Donate</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="help" class="modal fade in" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h1 class="modal-title"><center>Help/Instructions</center></h1>
+				</div>	
+				<div class="modal-body">
+					<p><center>
+						Begin by clicking the <img src="images/click.png" alt="" width="25px" height="25px"> until you have enough money to get your first job.
+						<br>After that you can choose to wait to be able to get another job or do some stuff on the side to make more money.
+						<br>
+						<br>Each job/promotion gives you money per second as well as influence per second.
+						<br>Influence is needed to get a better job.
+						<br>
+						<br>You can access this menu again by going to the options tab!</center>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<center><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></center>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/incremental2.min.js"></script>
+</body>
+</html>
